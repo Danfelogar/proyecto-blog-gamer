@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url(‘https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap’);
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.grid-container /*cuando tenga mucho espacio en la pantalla lo voy a centrar con esto*/ {
+    max-width: 98rem;
+    margin: auto;
+}
+header {
+    width: 100%;
+    height: 14rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+header .header-icons-container {
+    width: 100%;
+    height: 5rem;
+    display: grid;
+    background-color: rgb(243, 226, 193);
+}
+header .header-icons-container .icons {
+    width: 30rem;
+    height: auto;
+    display: flex;
+    justify-items: flex-end; /*los objetos contenidos pasaran a ir a la derecha*/
+    align-items: center;/*justificar que tomen todo el espacio para centrarse */
+    justify-content: space-between; /*entre iconos hay espacios de por medio */
+    justify-self: end; /**/
+    margin-right: 5rem;
+}
+header .header-icons-container .icons img:hover {
+    border-radius: 50%;
+    border:1px solid #c6c6ce;
+    box-shadow: 1px 1px 1px  rgb(76, 76, 117);
+}
+header .icons span figure img {
+    width: 3.4rem;
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 9rem;
+    background-color: #615b51;
+}
+nav .nav-logo-container {
+    margin-left: 5rem;
+
+}
+nav .nav-logo-container img {
+    width: 26rem;
+    margin-top: 1rem;
+    height: 80%;
+    border-radius: 1rem;
+}
+nav .nav-logo-container img:hover {
+    border: 0.7rem solid pink;
+    box-shadow: 1px 1px 1px 1px rgb(151, 66, 108);
+    
+}
+nav .profile-link {
+    display: flex;
+    align-items: center;/*alineamos de forma veritcal*/
+    justify-content: flex-end;/*alineamos de forma horizontal*/
+    font-size: 1.8rem;
+    margin-right: 5rem;
+}
+nav .profile-link a {
+    color: wheat;
+}
+nav .profile-link a:hover {
+    color: pink;
+    border-bottom: 0.15rem solid pink;
+}
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100%;
+    background: url('../img/fondo_b.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-main section {
+    display: grid;
+    grid-column: 2;
+    justify-items: center;
+    height: 35rem;
+    margin-top: 13rem;
+}
+.home-main-text {
+    font-family: 'Roboto mono',monospace;
+    font-size: 3.4rem;
+    font-weight: 70rem;
+    letter-spacing: 1rem;
+    color: rgb(24, 23, 23);
+    text-align: center;
+    color: rgb(87, 35, 35);
+}
+.home-main-button {
+    width: 12rem;
+    height: 5rem;
+    background-color: rgb(243, 226, 193);
+    display: grid;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.home-main-button:hover {
+    border: 0.15rem solid #615b51;
+    box-shadow: 2.5px 2.5px 2.5px  #615b51;
+}
+.home-main-button a {
+    font-weight:  700; /*700 significa darle negritas*/
+    font-size: 1.8rem;
+}
+
+/*segunda pag:blogs*/
+.blogs-main {
+    display: grid;
+    background: url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
+.blogs-news-container {
+    padding: 0 5rem 4rem;
+}
+.blogs-news-container  {
+    background: rgba(172, 148, 170, 0.836);
+}
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+.blogs-news-img-container {
+    grid-column: 1;
+}
+.blogs-news-img-container img {
+    width: 85%;
+}
+.blogs-news-info-container p {
+    margin-bottom: 3.5rem;
+}
+.blogs-posts-container {
+    padding: 0 5rem 4rem;
+}
+.post-container  {
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+}
+.blogs-posts-container h3 {
+    border-bottom: 0.1rem solid #cdd2da;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.blogs-button {
+    border-radius: 0.5rem;
+    border: 0.2rem solid rgb(243, 226, 193);
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(243, 226, 193);
+    border: 0.15rem solid #615b51;
+    font-weight:  700;
+    
+}
+.blogs-button:hover {
+    color: rgb(8, 8, 8);
+    border: 0.15rem solid pink;
+    font-weight:  700;
+    box-shadow: 2.5px 2.5px 2.5px  pink;
+}
+.blogs-posts-container .post-container {
+    display: inline-block;
+    padding-left: 1rem;
+    max-width: 30%;
+    margin-bottom: 5rem;
+}
+.blogs-posts-container .post-container p {
+    margin-bottom: 3.5rem;
+}
+.blogs-posts-container .post-container img {
+    width: 90%;
+    height: 20rem;
+}
+footer {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(243, 226, 193);
+    border-top: 3.5rem solid #615b51;
+    text-align: center; /* quiero que tu hijo que es el p se centre */
+}
+
+footer p {
+    color: rgb(8, 8, 8);
+    padding-top: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+body .blogs-main h3 {
+    font-family: 'Roboto Mono'monospace;
+    font-size: 3.4rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+body .blogs-main section div h2 {
+    font-family: 'Roboto Mono'monospace;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+body .blogs-main section div p {
+    font-family: 'Roboto Mono'monospace;
+    font-size: 1.6rem;
+    text-align: justify;
+}
+body .blogs-main section div .p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+body .blogs-main section div .p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+/*tercera pag:blog¿1?*/
+.blogpost-main {
+    display: grid;
+    background: url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
+.blogpost-img-container {
+    padding: 0 5rem 4rem;
+}
+.blogpost-img-container {
+    width: 100%;
+    padding-top: 1rem;
+}
+.blogpost-main-container {
+    padding: 0 5rem 4rem;
+}
+.blogpost-main-container  article h1 {
+    padding: 1rem 0;
+    font-size: 3.5rem;
+}
+.blogpost-main-container h3 {
+    border-bottom: 0.1rem solid #cdd2da;
+    padding-bottom: 2rem;
+}
+.blogpost-main-container  h3 {
+    font-size: 3.5rem;
+}
+.blogpost-main-container p {
+    font-size: 2rem;
+    padding-top: 1rem;
+    text-align: justify;
+}
+.contact-main-container {
+    width: 100%;
+    min-height: 2.5rem;
+    background-color: rgba(172, 148, 170, 0.836);
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.contact-main-container div {
+    display: inline-block;
+    width: 49.5%;/*para cuando se quieren dividir dos contenedores iguales*/
+    height: 100%;
+} 
+.contact-main-container div a {
+    border-bottom: 0.1rem solid black;
+    padding-bottom: 0.00rem;
+}
+.contact-main-container .contact-left, .contact-right {
+    text-align: initial;
+    margin-top: 1.5rem;
+}
+.contact-main-container .contact-left, .contact-right a {
+ margin-top: 0.5rem;
+}
+.contact-main-container img {
+    width: 10rem;
+    height: 10rem;
+}
+.contact-main-container div a {
+    margin-top: 10px;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.contact-main-container div p {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+/*cuarta pag:perfil*/
+
+.profile-main-container {
+    padding: 7rem 4rem;
+    background-color: rgba(172, 148, 170, 0.836);
+    margin-bottom: 5rem;
+}
+.profile-main-container img {
+    width: 32rem;
+    height:45rem;
+    align-items: flex-start;
+    margin-right: 3rem;
+    margin-left: 10px;
+}
+.profile-main-container .grid-container {
+    margin-left: 2rem;
+}
+.profile-main-container .profile-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.profile-main-proyects {
+    padding:  0 5rem 4rem;
+}
+.profile-main-container .profile-container h2 {
+    font-size: 4.0rem;
+    text-align: center;
+    margin-bottom: 3.6rem;
+}
+.profile-main-container .profile-container p {
+    font-size: 3rem;
+    text-align: justify;
+    margin-bottom: 3.6rem;
+    color:wheat;
+}
+.profile-main-proyects h3 {
+    border-bottom: 0.1rem solid #cdd2da;
+    padding-bottom: 3.5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.profile-main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.1fr;
+}
+.proyects-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.proyect-container {
+    padding: 0 1rem;
+}
+.proyect-container h4 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+}
+.proyect-container p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.perfil-body {
+    background: url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
